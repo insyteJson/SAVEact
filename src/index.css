@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply m-0 bg-gray-50 text-gray-900 antialiased;
+  }
+
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+
+  /* Skip Link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:bg-blue-600 focus:text-white focus:p-4 focus:z-[100];
+  }
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  [data-print-hidden] {
+    display: none !important;
+  }
+}
